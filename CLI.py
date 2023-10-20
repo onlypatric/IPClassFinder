@@ -1,3 +1,8 @@
+"""
+authors:
+ - Pintescul Patric
+ - Chirdo Pietro
+"""
 import re
 
 class IPManager:
