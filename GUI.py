@@ -64,6 +64,8 @@ class MainApp(QApplication):
         self.main_window = QMainWindow()
         self.main_window.setWindowTitle('Network generator')
         self.main_window.setMinimumSize(QSize(720,480))
+
+        self.main_window.setStyleSheet("QTableWidget{font-size:20px;background-color:#000} QLineEdit{font-size:18px;padding:10px;border-radius:5px}")
         
         self.vbox = QVBoxLayout()
         self.vbox.setSpacing(0)
@@ -75,10 +77,10 @@ class MainApp(QApplication):
         self.titleSheet = "color:#fff;padding:0px;font-size:35px;font-weight:bold;margin:0px;"
         self.title2Sheet = "color:#fff;padding:0px;font-size:15px;font-weight:bold;margin:0px;"
         self.labels = [
-            QLabel(f"Network generator"),
-            QLabel(f"Network Base Address"),
-            QLabel(f"Network Subnet mask"),
-            QLabel(f"Result"),
+            QLabel(f"Generatore di reti"),
+            QLabel(f"Indirizzo base network"),
+            QLabel(f"Maschera di sottorete"),
+            QLabel(f"Risultato"),
         ]
         self.labels[0].setStyleSheet(self.titleSheet)
         self.labels[1].setStyleSheet(self.title2Sheet)

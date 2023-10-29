@@ -72,10 +72,10 @@ class IPManager:
         ip_parts = list(map(int, self.ip.split('.')))
         
         network_part = '.'.join(str(ip_parts[i]) for i in range(
-            *{"A":(0,1),"B":(0,2),"C":(0,3),"D":(0,),"E":(0,),"Unknown":(4,)}[self.get_netclass()]
+            *{"A":(0,1),"B":(0,2),"C":(0,3),"D":(0,0),"E":(0,0),"Unknown":(4,)}[self.get_netclass()]
             ))
         host_part = '.'.join(str(ip_parts[i]) for i in range(
-            *{"A":(1,4),"B":(2,4),"C":(3,4),"D":(4,),"E":(4,),"Unknown":(0,)}[self.get_netclass()]
+            *{"A":(1,4),"B":(2,4),"C":(3,4),"D":(4,4),"E":(4,4),"Unknown":(0,0)}[self.get_netclass()]
             ))
 
         return network_part, host_part
